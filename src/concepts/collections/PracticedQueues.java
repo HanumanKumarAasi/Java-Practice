@@ -60,9 +60,14 @@ public class PracticedQueues {
 		System.out.println("Inserting the element :"+integerPriorityQueue.offer("Hanu"));
 		integerPriorityQueue.offer("hanumankumar");
 		Iterator itr = integerPriorityQueue.iterator();
+
+		System.out.println("PQ started");
+		
 		while(itr.hasNext()) {
 			System.out.println(itr.next());
 		}
+		
+		System.out.println("PQ end");
 		
 		
 		

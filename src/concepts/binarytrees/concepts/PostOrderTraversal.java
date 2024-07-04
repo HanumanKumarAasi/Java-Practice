@@ -12,6 +12,12 @@ public class PostOrderTraversal {
 	        return postorder;
 	    }
 	
+	public List<Integer> postorderTraversal2(TreeNode root) {
+	    List<Integer> postorder = new LinkedList<Integer>();
+	    postOrderTraversalUsingTwoStacks(root,postorder);
+	        return postorder;
+	    }
+	
 	private void postOrderTraversalUsingTwoStacks(TreeNode root, List<Integer> list){
         if(root==null){
             return;
@@ -36,7 +42,7 @@ public class PostOrderTraversal {
         }
     }
 	
-	//This is throwing wrong answer needs to be addressed
+
 	private void postOrderTraversalUsingOneStacks(TreeNode root, List<Integer> list){
 		if(root==null) {
 			return;
@@ -54,12 +60,16 @@ public class PostOrderTraversal {
 					temp = stack.peek();
 					stack.pop();
 					list.add(temp.val);
+					
+					//checking whether the temp which is leaf node is right to the next peek node if yes we will be adding peek node to list
+					//Loop for checking does leaf node exists on right of the peek node
 					while(!stack.isEmpty() && temp==stack.peek().right) {
 						temp=stack.peek();
 						stack.pop();
 						list.add(temp.val);
 					}
 				}else {
+					//right node
 					currentNode = temp;
 				}
 				
