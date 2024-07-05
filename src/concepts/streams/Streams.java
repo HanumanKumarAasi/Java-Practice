@@ -67,6 +67,15 @@ public class Streams {
 		
 		System.out.println(ch.size());
 		
+		LinkedHashMap<Character, Integer> map = name.chars()
+				.mapToObj(c->(char)c)
+				.collect(Collectors.toMap(Function.identity(), v->1,Integer::sum,LinkedHashMap<Character, Integer>::new));
+		
+		System.out.println("map");
+		for(Character ch1:map.keySet()) {
+			System.out.println(ch1+"->"+map.get(ch1));
+		}
+		
 		
 		List<Integer> integers = Arrays.asList(1,2,3,4,5,6,7,8,9,0);
 		int sum = integers.stream().reduce(0,(out,i)->out+i);
