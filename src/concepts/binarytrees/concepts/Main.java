@@ -35,7 +35,8 @@ public class Main {
 		//System.out.println(level.levelOrder(root));
 		
 		PostOrderTraversal inTraversal = new PostOrderTraversal();
-		System.out.println(inTraversal.postorderTraversal(root));
+		System.out.println("One stack post"+inTraversal.postorderTraversal(root));
+		System.out.println("Two stack post"+inTraversal.postorderTraversal2(root));
 		
 		
 		CheckIfTreeIsBalancedTreeOrNot check = new CheckIfTreeIsBalancedTreeOrNot();
