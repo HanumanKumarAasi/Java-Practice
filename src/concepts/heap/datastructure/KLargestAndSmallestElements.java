@@ -2,7 +2,7 @@ package concepts.heap.datastructure;
 
 import java.util.PriorityQueue;
 
-public class KLargestElements {
+public class KLargestAndSmallestElements {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
